@@ -1,16 +1,26 @@
 'use strict';
 
+const inputElementText = document.querySelector('input[type="text"]');
+
+console.log(inputElementText.value);
+
+const inputElementNumber = document.querySelector('input[type="number"]');
+
+console.log(inputElementNumber.value);
+
+const buttonSubmit = document.querySelector('button[type="submit"]');
+
+console.log(buttonSubmit);
+
 // 1. Con un prompt chiediamo all'utente il numero di chilometri da percorrere, il valore comunicato dall'utente dovra essere trasformato in un numero con parseint e salveremo il valore in una varibile chiamata kmUtente.
 
-const kmUtente = Number(
-  prompt('Inserire il numeri di chilometri da percorrere')
-);
+const kmUtente = Number(inputElementText.value);
 
 console.log('chilometri che il passeggero deve percorrere:', kmUtente);
 
 // 2. Con un'altro prompt chiediamo l'età del passeggero il valore comunicato dall'utente dovra essere trasformato in un numero con parseint e salveremo il valore il una variabile che chiameremo etaUtente.
 
-const etaUtente = Number(prompt("Inserire l'età del passeggero"));
+const etaUtente = Number(inputElementNumber.value);
 
 console.log('età del passeggero:', etaUtente);
 
