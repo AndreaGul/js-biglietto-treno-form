@@ -1,9 +1,22 @@
 'use strict';
 
 //vado a trasformare in variabile gli input e il bottone
-const inputElementText = document.querySelector('input[type="text"]');
-const inputElementNumber = document.querySelector('input[type="number"]');
+const inputElementNumberKm = document.querySelector('.input-km input');
+const inputElementNumberEta = document.querySelector('.input-eta input');
+const inputElementNomCogn = document.querySelector('.input-n-c input');
 const buttonSubmit = document.querySelector('button[type="submit"]');
+const buttonReset = document.querySelector('button[type="reset"]');
+
+buttonReset.addEventListener('click', function () {
+  // 1. Con un input chiediamo all'utente il numero di chilometri da percorrere,
+  inputElementNumberKm.value = null;
+
+  // 2. Con un'altro input chiediamo l'età del passeggero
+  inputElementNumberEta.value = null;
+
+  //1-2 plus chiediiamo all'utente anche il suo nome e cognome
+  inputElementNomCogn.value = null;
+});
 
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 
@@ -18,10 +31,14 @@ const percentualeScontoOver65 = 40;
 
 buttonSubmit.addEventListener('click', function () {
   // 1. Con un input chiediamo all'utente il numero di chilometri da percorrere,
-  const kmUtente = Number(inputElementText.value);
+  const kmUtente = Number(inputElementNumberKm.value);
 
   // 2. Con un'altro input chiediamo l'età del passeggero
-  const etaUtente = Number(inputElementNumber.value);
+  const etaUtente = Number(inputElementNumberEta.value);
+
+  //1-2 plus chiediiamo all'utente anche il suo nome e cognome
+  const NomCognUtente = inputElementNomCogn.value;
+  console.log(NomCognUtente);
 
   console.log('chilometri che il passeggero deve percorrere:', kmUtente);
   console.log('età del passeggero:', etaUtente);
