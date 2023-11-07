@@ -51,8 +51,6 @@ if (!isNaN(kmUtente) && !isNaN(etaUtente)) {
 
   if (etaUtente < 18) {
     scontoBiglietto = (prezzoBiglietto * percentualeScontoMinorenni) / 100;
-
-    console.log('prezzo del biglietto sconto minorenni:', prezzoBiglietto);
   }
 
   // 5.  Va applicato uno sconto del 40% per gli over 65.
@@ -60,11 +58,9 @@ if (!isNaN(kmUtente) && !isNaN(etaUtente)) {
   //     il valore del 40% sarà definito in una varibile che chiamiamo sconto.
   else if (etaUtente >= 65) {
     scontoBiglietto = (prezzoBiglietto * percentualeScontoOver65) / 100;
-
-    console.log('prezzo del biglietto sconto over 65:', prezzoBiglietto);
   }
 
-  prezzoBiglietto -= sconto;
+  prezzoBiglietto -= scontoBiglietto;
   // 6.  In fine stampere in console il valore della variabile prezzoBiglietto mostrando al massimo due cifre dopo la virgolain modo tale da rappresentare i centesimi.
 
   prezzoBiglietto = +prezzoBiglietto.toFixed(2);
