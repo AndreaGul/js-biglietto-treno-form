@@ -1,1 +1,20 @@
+:root {
+  --color-red: #b91547;
+  --color-grey: #c5c5c5;
+}
 
+body {
+  background-color: var(--color-red);
+}
+
+.ag-text-color-red {
+  color: var(--color-red);
+}
+
+.ag-bg-btn-color-grey {
+  background-color: var(--color-grey);
+}
+
+.container-info button {
+  border-radius: 3px;
+}
