@@ -7,17 +7,6 @@ const inputElementNomCogn = document.querySelector('.input-n-c input');
 const buttonSubmit = document.querySelector('button[type="submit"]');
 const buttonReset = document.querySelector('button[type="reset"]');
 
-buttonReset.addEventListener('click', function () {
-  // 1. Con un input chiediamo all'utente il numero di chilometri da percorrere,
-  inputElementNumberKm.value = null;
-
-  // 2. Con un'altro input chiediamo l'età del passeggero
-  inputElementNumberEta.value = null;
-
-  //1-2 plus chiediiamo all'utente anche il suo nome e cognome
-  inputElementNomCogn.value = null;
-});
-
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 
 //prezzo al kilometro
@@ -75,4 +64,17 @@ buttonSubmit.addEventListener('click', function () {
   else {
     console.log('ERRORE: hai inserito dei caratteri diversi da un numero');
   }
+});
+
+//Al cliick del pulsannte reset i campi di input si svuotano
+
+buttonReset.addEventListener('click', function () {
+  // 1. Con un input chiediamo all'utente il numero di chilometri da percorrere,
+  inputElementNumberKm.value = null;
+
+  // 2. Con un'altro input chiediamo l'età del passeggero
+  inputElementNumberEta.value = null;
+
+  //1-2 plus chiediiamo all'utente anche il suo nome e cognome
+  inputElementNomCogn.value = null;
 });
