@@ -20,6 +20,7 @@ body {
   background-color: var(--color-dark-grey);
 }
 
+/* border radius dei bottno nel container info */
 .container-info button {
   border-radius: 3px;
 }
