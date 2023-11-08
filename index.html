@@ -25,13 +25,13 @@
       </h1>
 
       <!-- box info -->
-      <div class="bg-white rounded container-info p-4">
+      <div class="bg-white rounded container-info p-4 shadow">
         <div class="d-flex justify-content-center gap-5 mb-5">
           <!-- input dove inserire il nomme e cognome -->
           <div class="input-n-c">
             <h6 class="ag-text-color-red pb-2">Nome Cognome</h6>
             <input
-              class="form-control border-black text-center p-1"
+              class="form-control border-black text-center p-1 fw-medium"
               type="text"
               value=""
             />
@@ -42,7 +42,7 @@
           <div class="input-km">
             <h6 class="ag-text-color-red pb-2">Km da percorrere</h6>
             <input
-              class="form-control border-black text-center p-1"
+              class="form-control border-black text-center p-1 fw-medium"
               type="number"
               value=""
             />
@@ -53,7 +53,7 @@
           <div class="input-eta">
             <h6 class="ag-text-color-red pb-2">Età del passeggero</h6>
             <input
-              class="form-control border-black text-center p-1"
+              class="form-control border-black text-center p-1 fw-medium"
               type="number"
               value=""
             />
@@ -81,55 +81,57 @@
       </div>
       <!-- /box info -->
 
-      <div>
-        <!-- titolo in alto al box biglietto -->
-        <h2 class="text-white m-4 fw-bolder text-uppercase">
-          Il tuo biglietto
-        </h2>
-        <!-- box biglietto -->
-        <div class="bg-white container-biglietto p-4 text-start">
-          <h5 class="text-uppercase fw-bolder">Dettaglio passeggeri</h5>
+      <div class="box-biglietto">
+        <div class="d-none">
+          <!-- titolo in alto al box biglietto -->
+          <h2 class="text-white m-4 fw-bolder text-uppercase">
+            Il tuo biglietto
+          </h2>
+          <!-- box biglietto -->
+          <div class="bg-white container-biglietto p-4 text-start">
+            <h5 class="text-uppercase fw-bolder">Dettaglio passeggeri</h5>
 
-          <div class="row p-0 g-0">
-            <!-- parte con il nome del passeggero -->
-            <div class="col-3 ag-bg-color-dark-grey p-3">
-              <h5 class="text-uppercase fw-bolder mb-0">Nome passeggero</h5>
-              <p id="nome-passeggero" class="fw-bolder"></p>
-            </div>
-            <!-- /parte con il nome del passeggero -->
-
-            <div class="col row g-0 border-top border-bottom border-black">
-              <!-- tipo di biglietto -->
-              <div class="col-4 p-3">
-                <h6 class="fw-bolder mb-5">Offerta</h6>
-                <p class="mb-0 fw-medium">Biglietto Standard</p>
+            <div class="row p-0 g-0">
+              <!-- parte con il nome del passeggero -->
+              <div class="col-3 ag-bg-color-dark-grey p-3">
+                <h5 class="text-uppercase fw-bolder mb-0">Nome passeggero</h5>
+                <p id="nome-passeggero" class="fw-bolder"></p>
               </div>
-              <!-- /tipo di biglietto -->
+              <!-- /parte con il nome del passeggero -->
 
-              <!-- carrozza -->
-              <div class="col p-3">
-                <h6 class="fw-bolder mb-5">Carrozza</h6>
-                <p id="carrozza" class="mb-0 fw-medium"></p>
-              </div>
-              <!-- /carrozza -->
+              <div class="col row g-0 border-top border-bottom border-black">
+                <!-- tipo di biglietto -->
+                <div class="col-4 p-3">
+                  <h6 class="fw-bolder mb-5">Offerta</h6>
+                  <p class="mb-0 fw-medium">Biglietto Standard</p>
+                </div>
+                <!-- /tipo di biglietto -->
 
-              <!-- codice CP -->
-              <div class="col p-3">
-                <h6 class="fw-bolder mb-5">Codice CP</h6>
-                <p id="codice-cp" class="mb-0 fw-medium"></p>
-              </div>
-              <!-- codice CP -->
+                <!-- carrozza -->
+                <div class="col p-3">
+                  <h6 class="fw-bolder mb-5">Carrozza</h6>
+                  <p id="carrozza" class="mb-0 fw-medium"></p>
+                </div>
+                <!-- /carrozza -->
 
-              <!-- costo del biglietto -->
-              <div class="col p-3">
-                <h6 class="fw-bolder mb-5">Costo biglietto</h6>
-                <p id="costo-biglietto" class="mb-0 fw-medium"></p>
+                <!-- codice CP -->
+                <div class="col p-3">
+                  <h6 class="fw-bolder mb-5">Codice CP</h6>
+                  <p id="codice-cp" class="mb-0 fw-medium"></p>
+                </div>
+                <!-- codice CP -->
+
+                <!-- costo del biglietto -->
+                <div class="col p-3">
+                  <h6 class="fw-bolder mb-5">Costo biglietto</h6>
+                  <p id="costo-biglietto" class="mb-0 fw-medium"></p>
+                </div>
+                <!-- /costo del biglietto -->
               </div>
-              <!-- /costo del biglietto -->
             </div>
           </div>
+          <!-- /box biglietto -->
         </div>
-        <!-- /box biglietto -->
       </div>
     </main>
 

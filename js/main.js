@@ -7,15 +7,14 @@ const inputElementNomCogn = document.querySelector('.input-n-c input');
 const buttonSubmit = document.querySelector('button[type="submit"]');
 const buttonReset = document.querySelector('button[type="reset"]');
 
+//prendo gli spazzi dove andro a inserire i vari elementi del biglietto
 const nomePasseggero = document.getElementById('nome-passeggero');
 const carrozza = document.getElementById('carrozza');
 const codiceCp = document.getElementById('codice-cp');
 const costoBiglietto = document.getElementById('costo-biglietto');
 
-console.log(nomePasseggero);
-console.log(carrozza);
-console.log(codiceCp);
-console.log(costoBiglietto);
+// questa varibile che al fuo internno racchiude il contenitore del biglietto
+const boxBiglietto = document.querySelector('main .box-biglietto div ');
 
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 
@@ -29,6 +28,10 @@ const percentualeScontoMinorenni = 20;
 const percentualeScontoOver65 = 40;
 
 buttonSubmit.addEventListener('click', function () {
+  //prima di tutto rendiamo visibile in campo dove verrà mostrato il biglietto
+  boxBiglietto.classList.add('d-block');
+  boxBiglietto.classList.remove('d-none');
+
   // 1. Con un input chiediamo all'utente il numero di chilometri da percorrere,
   const kmUtente = Number(inputElementNumberKm.value);
 
@@ -87,12 +90,16 @@ buttonSubmit.addEventListener('click', function () {
 //Al cliick del pulsannte reset i campi di input si svuotano
 
 buttonReset.addEventListener('click', function () {
-  // 1. Con un input chiediamo all'utente il numero di chilometri da percorrere,
+  // 1. rendiamo la casella il numero di chilometri vuota
   inputElementNumberKm.value = null;
 
-  // 2. Con un'altro input chiediamo l'età del passeggero
+  // 2. rendiamo la casella  l'età del passeggero vuota
   inputElementNumberEta.value = null;
 
-  //1-2 plus chiediiamo all'utente anche il suo nome e cognome
+  //1-2 rendiamo la casella nome e cognome vuota
   inputElementNomCogn.value = null;
+
+  //in fine andiamo a levare il biglietto visto che è stato scartato
+  boxBiglietto.classList.add('d-none');
+  boxBiglietto.classList.remove('d-block');
 });
