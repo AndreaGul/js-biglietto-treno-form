@@ -36,7 +36,7 @@ buttonSubmit.addEventListener('click', function () {
   const kmUtente = Number(inputElementNumberKm.value);
 
   // 2. Con un'altro input chiediamo l'età del passeggero
-  const etaUtente = Number(inputElementNumberEta.value);
+  const etaUtente = inputElementNumberEta.value;
 
   //1-2 plus chiediiamo all'utente anche il suo nome e cognome
   const NomCognUtente = inputElementNomCogn.value;
@@ -46,7 +46,7 @@ buttonSubmit.addEventListener('click', function () {
   console.log('età del passeggero:', etaUtente);
 
   //verifichiamo che l'utente abbia inserito dei caratteri che siano dei numeri
-  if (!isNaN(kmUtente) && !isNaN(etaUtente)) {
+  if (!isNaN(kmUtente)) {
     // 3.  Il prezzo del biglietto è definito in base ai km (0.21 € al km),
     let prezzoBiglietto = kmUtente * prezzo;
     let scontoBiglietto = 0;
@@ -57,12 +57,12 @@ buttonSubmit.addEventListener('click', function () {
     );
 
     // 4.  Va applicato uno sconto del 20% per i minorenni.
-    if (etaUtente < 18) {
+    if (etaUtente === 'minorenne') {
       scontoBiglietto = (prezzoBiglietto * percentualeScontoMinorenni) / 100;
     }
 
     // 5.  Va applicato uno sconto del 40% per gli over 65.
-    else if (etaUtente >= 65) {
+    else if (etaUtente === 'over65') {
       scontoBiglietto = (prezzoBiglietto * percentualeScontoOver65) / 100;
     }
 
