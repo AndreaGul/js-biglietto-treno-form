@@ -74,14 +74,14 @@ buttonSubmit.addEventListener('click', function () {
     prezzoBiglietto -= scontoBiglietto;
     // 6.  In fine stampere in console il valore della variabile prezzoBiglietto mostrando al massimo due cifre dopo la virgolain.
 
-    prezzoBiglietto = Number(prezzoBiglietto.toFixed(2));
+    prezzoBiglietto = +prezzoBiglietto.toFixed(2);
 
     console.log('prezzo del biglietto:', prezzoBiglietto);
 
     //7 inserimento dei dati all'interno del box biglietto
 
     nomePasseggero.innerHTML = NomCognUtente;
-    tariffa.innerHTML = tipoTariffa;
+    tariffa.innerText = tipoTariffa;
     carrozza.innerHTML = Math.floor(Math.random() * 10);
     codiceCp.innerHTML = Math.floor(Math.random() * 99999);
     costoBiglietto.innerHTML = prezzoBiglietto + '€';
