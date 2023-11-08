@@ -1,9 +1,9 @@
 'use strict';
 
 //vado a trasformare in variabile gli input e il bottone
-const inputElementNumberKm = document.querySelector('.input-km input');
-const inputElementNumberEta = document.querySelector('.input-eta input');
-const inputElementNomCogn = document.querySelector('.input-n-c input');
+const inputElementNumberKm = document.querySelector('#input-km');
+const inputElementNumberEta = document.querySelector('#input-eta');
+const inputElementNomCogn = document.querySelector('#input-n-c');
 const buttonSubmit = document.querySelector('button[type="submit"]');
 const buttonReset = document.querySelector('button[type="reset"]');
 
