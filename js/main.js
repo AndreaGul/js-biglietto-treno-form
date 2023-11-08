@@ -14,7 +14,7 @@ const codiceCp = document.getElementById('codice-cp');
 const costoBiglietto = document.getElementById('costo-biglietto');
 
 // questa varibile che al fuo internno racchiude il contenitore del biglietto
-const boxBiglietto = document.querySelector('main .box-biglietto div ');
+const boxBiglietto = document.getElementById('box-biglietto');
 
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 
@@ -29,7 +29,7 @@ const percentualeScontoOver65 = 40;
 
 buttonSubmit.addEventListener('click', function () {
   //prima di tutto rendiamo visibile in campo dove verrà mostrato il biglietto
-  boxBiglietto.classList.add('d-block');
+
   boxBiglietto.classList.remove('d-none');
 
   // 1. Con un input chiediamo all'utente il numero di chilometri da percorrere,
@@ -101,5 +101,4 @@ buttonReset.addEventListener('click', function () {
 
   //in fine andiamo a levare il biglietto visto che è stato scartato
   boxBiglietto.classList.add('d-none');
-  boxBiglietto.classList.remove('d-block');
 });
