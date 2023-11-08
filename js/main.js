@@ -7,6 +7,16 @@ const inputElementNomCogn = document.querySelector('.input-n-c input');
 const buttonSubmit = document.querySelector('button[type="submit"]');
 const buttonReset = document.querySelector('button[type="reset"]');
 
+const nomePasseggero = document.getElementById('nome-passeggero');
+const carrozza = document.getElementById('carrozza');
+const codiceCp = document.getElementById('codice-cp');
+const costoBiglietto = document.getElementById('costo-biglietto');
+
+console.log(nomePasseggero);
+console.log(carrozza);
+console.log(codiceCp);
+console.log(costoBiglietto);
+
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 
 //prezzo al kilometro
@@ -59,6 +69,14 @@ buttonSubmit.addEventListener('click', function () {
     prezzoBiglietto = +prezzoBiglietto.toFixed(2);
 
     console.log('prezzo del biglietto:', prezzoBiglietto);
+
+    //7 inserimento dei dati all'interno del box biglietto
+
+    nomePasseggero.innerHTML = NomCognUtente;
+
+    carrozza.innerHTML = Math.floor(Math.random() * 10);
+    codiceCp.innerHTML = Math.floor(Math.random() * 99999);
+    costoBiglietto.innerHTML = prezzoBiglietto + '€';
   }
   //possibilità che l'utente abbia inserito dei caratteri diversi un un numero
   else {
