@@ -9,6 +9,7 @@ const buttonReset = document.querySelector('button[type="reset"]');
 
 //prendo gli spazzi dove andro a inserire i vari elementi del biglietto
 const nomePasseggero = document.getElementById('nome-passeggero');
+const tariffa = document.getElementById('tariffa');
 const carrozza = document.getElementById('carrozza');
 const codiceCp = document.getElementById('codice-cp');
 const costoBiglietto = document.getElementById('costo-biglietto');
@@ -50,6 +51,8 @@ buttonSubmit.addEventListener('click', function () {
     // 3.  Il prezzo del biglietto è definito in base ai km (0.21 € al km),
     let prezzoBiglietto = kmUtente * prezzo;
     let scontoBiglietto = 0;
+    //tipo di tariffa
+    let tipoTariffa = 'Tariffa Maggiorenne';
 
     console.log(
       'prezzo del biglietto senza eventuali sconti:',
@@ -59,24 +62,26 @@ buttonSubmit.addEventListener('click', function () {
     // 4.  Va applicato uno sconto del 20% per i minorenni.
     if (etaUtente === 'minorenne') {
       scontoBiglietto = (prezzoBiglietto * percentualeScontoMinorenni) / 100;
+      tipoTariffa = 'Tariffa Minorenne';
     }
 
     // 5.  Va applicato uno sconto del 40% per gli over 65.
     else if (etaUtente === 'over65') {
       scontoBiglietto = (prezzoBiglietto * percentualeScontoOver65) / 100;
+      tipoTariffa = 'Tariffa Over';
     }
 
     prezzoBiglietto -= scontoBiglietto;
     // 6.  In fine stampere in console il valore della variabile prezzoBiglietto mostrando al massimo due cifre dopo la virgolain.
 
-    prezzoBiglietto = +prezzoBiglietto.toFixed(2);
+    prezzoBiglietto = Number(prezzoBiglietto.toFixed(2));
 
     console.log('prezzo del biglietto:', prezzoBiglietto);
 
     //7 inserimento dei dati all'interno del box biglietto
 
     nomePasseggero.innerHTML = NomCognUtente;
-
+    tariffa.innerHTML = tipoTariffa;
     carrozza.innerHTML = Math.floor(Math.random() * 10);
     codiceCp.innerHTML = Math.floor(Math.random() * 99999);
     costoBiglietto.innerHTML = prezzoBiglietto + '€';
